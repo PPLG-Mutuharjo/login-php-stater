@@ -3,7 +3,6 @@
 
 <img width="527" height="136" alt="image" src="https://github.com/user-attachments/assets/747d4038-8add-4b01-8225-86502d0a74e7" />
 
-
 Buat Database & Tabel:
 Buat database baru (misal: db_sekolah).
 Buat tabel users dengan struktur minimal: id (INT, AUTO_INCREMENT, PRIMARY KEY), username (VARCHAR), password (VARCHAR), nama_lengkap (VARCHAR).
