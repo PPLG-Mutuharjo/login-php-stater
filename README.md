@@ -36,3 +36,5 @@ Amankan dashboard.php:
 Buka kembali file dashboard.php dan isi bagian "TUGAS UTAMA SISWA" di paling atas untuk mengecek session.
 
 Ini akan menjadi proyek yang sangat komprehensif untuk mengenalkan mereka pada dasar-dasar otentikasi web dengan PHP.
+
+Guideline project -> https://medium.com/@kurialfarez/guideline-membuat-php-login-a645f6871186
