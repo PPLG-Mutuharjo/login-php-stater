@@ -3,13 +3,17 @@
 // 1. Mulai session (session_start())
 // 2. Buat pengecekan (if-else)
 //    Jika TIDAK ADA session 'username' (atau 'user_id'),
-//    maka redirect (paksa) pengguna kembali ke halaman login.php
+//    maka redirect (paksa) pengguna kembali ke halaman index.php
 //
-// session_start();
-// if (!isset($_SESSION['username'])) {
-//     header("Location: login.php");
-//     exit(); // Penting untuk menghentikan eksekusi script
-// }
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit(); // Penting untuk menghentikan eksekusi script
+}
+// Tambahkan header untuk mencegah caching oleh browser sehingga tombol back tidak menampilkan halaman cache
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +52,8 @@
                 <strong>
                     <?php
                     // TUGAS SISWA: Tampilkan nama pengguna yang login dari data SESSION
-                    // Contoh: echo $_SESSION['nama_lengkap']; 
+                    // Contoh: 
+                    echo $_SESSION['nama_lengkap'];
                     ?>
                 </strong>
                 Anda telah berhasil login. Ini adalah halaman rahasia Anda.
